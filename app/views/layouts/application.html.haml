@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    -# OPTIMIZE is there a way we can cache more of this?
+    %meta{name: "viewport", content: "width=device-width, minimal-ui"}
+    %title= content_for?(:title) ? yield(:title) : "Transportation Hackathon"
+
+    -# for mobile safari. autolinks don't work with turbolinks anyway
+    %meta{name: "format-detection", content: "telephone=no"}
+
+    = javascript_include_tag "//use.typekit.net/lef8fjt.js"
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+    :javascript
+      window.Transportation = {
+        config: {
+          env: "#{Rails.env}"
+        }
+      };
+
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+
+  %body(class="#{controller_name}-#{action_name} #{content_for :body_class}")
+    #layout_container
+      #header
+        = render "layouts/navigation"
+      #main{role: "main"}
+        = render "layouts/messages"
+
+        = content_for?(:content) ? content_for(:content) : yield
+
+      #footer
+        .container
+          FOOTER
+
+= yield(:root) if content_for?(:root)

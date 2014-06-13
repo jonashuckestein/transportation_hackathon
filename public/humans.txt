@@ -1,0 +1,9 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Founder: Jonas Huckestein
+  Site: http://twitter.com/jonas
+  Twitter: @jonas
+  Location: San Franciscio

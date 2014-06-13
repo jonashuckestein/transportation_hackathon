@@ -1,0 +1,17 @@
+- cache [:navigation] do
+  %nav.navbar.navbar-default.navbar-fixed-top
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+
+        = link_to(:root, class: "navbar-brand") do
+          %span.glyphicon.glyphicon-th
+          Transportation hackathon
+
+      .collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          = render "layouts/navigation_links"

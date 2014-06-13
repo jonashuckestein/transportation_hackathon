@@ -1,0 +1,10 @@
+// all .scss files need to be run in the context of bootstrap
+// to make variables etc accessible
+@import "variables";
+@import "bootstrap";
+
+@import "vendor/nprogress";
+
+// add new stylesheets here
+@import "main";
+
