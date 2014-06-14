@@ -1,3 +1,54 @@
+body {
+  padding-top: 30px;
+}
+
+.frame {
+  height: 560px;
+  width: 280px;
+  padding: 15px 20px;
+  color: #F3EDD6;
+  background: #0D3E58;
+  .button {
+    border-radius: 23px;
+    height: 50px;
+    width: 100%;
+    background: #DA6260;
+    color: #F3EDD6;
+    line-height: 40px;
+    vertical-align: middle;
+    border: solid 5px #245068;
+    border: solid 5px #245068;
+    text-align: center;
+  }
+  .glyphicon {
+    color: #19C0C2 !important;
+  }
+}
+
+.frame2 {
+  height: 560px;
+  width: 280px;
+  padding: 15px 20px;
+  color: #FEFDFE;
+  background: #39999B;
+  .button {
+    border-radius: 23px;
+    height: 50px;
+    width: 100%;
+    color: #000;
+    /*background: #DA6260;*/
+    background: #D7AA35;
+    background: #A4D15E;
+    color: #2C362A;
+    line-height: 40px;
+    vertical-align: middle;
+    border: solid 5px #4CA2A4;
+    text-align: center;
+  }
+
+}
+
+
 body.groups {
   padding-top: 50px;
 
