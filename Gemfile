@@ -31,7 +31,6 @@ group :development do
   gem "better_errors"
   gem "quiet_assets"
   gem "letter_opener"
-  gem "bullet"
 end
 
 group :console do
@@ -61,3 +60,4 @@ end
 
 gem "sinatra"
 gem "jbuilder"
+gem "geocoder"

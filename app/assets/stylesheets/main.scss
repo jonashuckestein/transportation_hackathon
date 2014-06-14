@@ -1,207 +1,35 @@
-// only works for google webfont
-.lnum {
-  font-variant-numeric: lining-nums;
-  -moz-font-feature-settings:"lnum" 1;
-  -moz-font-feature-settings:"lnum=1";
-  -ms-font-feature-settings:"lnum" 1;
-  -o-font-feature-settings:"lnum" 1;
-  -webkit-font-feature-settings:"lnum" 1;
-  font-feature-settings:"lnum" 1;
-}
+body.groups {
+  padding-top: 50px;
 
-
-li a .glyphicon,
-a.list-group-item .glyphicon {
-  margin-right: 7px;
-}
-
-.white-panel {
-  background: white;
-  border-radius: 2px;
-  padding: $grid-gutter-width/2;
-}
-
-@media (max-width: $screen-xs-max) {
-  .white-panel {
-    margin-left: -($grid-gutter-width/2);
-    margin-right: -($grid-gutter-width/2);
-    border-radius: 0px;
-  }
-}
-
-
-.success {
-  color: $brand-success !important;
-}
-
-.danger {
-  color: $brand-danger !important;
-}
-
-.gray {
-  color: $gray-light;
-}
-
-.popover-link {
-  border-bottom: dotted 1px;
-  cursor: help;
-}
-
-.fluid-video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;
-}
-.fluid-video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.section {
-  padding: 20px 0px;
-  @media (min-width: $screen-sm-min) {
-    padding: 45px 0px;
-  }
-}
-
-@media (min-width: $screen-sm-min) {
-  .anchor:before {
-    display: block;
-    content: " ";
-    margin-top: -75px;
-    height: 75px;
-    visibility: hidden;
-  }
-  h1,h2, h3, h4{
-    &.anchor:before {
-      margin-top: -95px;
-      height: 95px;
+  .group {
+    .users {
+      border: solid 3px red;
+      width: 300px;
+      height: 300px;
+      border-radius: 150px;
+      position: relative;
+      background: #fafafa;
     }
-  }
-}
-
-h1 {
-  font-size: 36px;
-  text-align: center;
-  padding-bottom: 15px;
-  border-bottom: solid 1px #ddd;
-  margin: 25px 0px 21px 0px;
-  @media (min-width: $screen-sm-min) {
-    margin: 40px 0px 42px 0px;
-    padding-bottom: 30px;
-    font-size: 70px;
-  }
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  @media (min-width: $screen-sm-min) {
-    margin-bottom: 20px;
-    font-size: 52px;
-  }
-}
-
-h3, h4 {
-  font-family: adelle;
-}
-
-
-.panel {
-  border: none;
-}
-.panel-body > .no-gutter:first-child {
-  margin-top: -($grid-gutter-width/2 + 1);
-}
-
-.panel-root {
-  margin-bottom: 20px;
-  .panel-heading {
-    font-weight: bold;
-    a {
-      color: #777;
-    }
-  }
-  .list-group {
-    .glyphicon {
-      /*color: darken($brand-primary, 10%);*/
-    }
-    a.list-group-item.active {
-      color: #333;
-      border-color: #ccc;
-      background: #f5f5f5; // same as panel heading
-    }
-  }
-
-}
-
-@media (min-width: $screen-md-min) {
-  .panel-root-vcenter {
-    margin-top: $navbar-height;
-  }
-}
-
-// a panel on the root level
-@media (max-width: $screen-xs-max) {
-  .panel-root {
-    border-radius: 0px;
-    margin-left: -($grid-gutter-width/2);
-    margin-right: -($grid-gutter-width/2);
-  }
-}
-
-// make tables and other panels span edge-to edge inside a container that
-// has gutter-padding. on mobile, this means elements span all the way
-// across
-.no-gutter {
-  margin-left: -($grid-gutter-width/2);
-  margin-right: -($grid-gutter-width/2);
-  > table.table tr {
-    td:first-child,
-    th:first-child {
-      padding-left: ($grid-gutter-width/2);
-    }
-    td:last-child,
-    th:last-child {
-      padding-right: ($grid-gutter-width/2);
-    }
-  }
-}
-
-
-// override flash settings for iphone experience
-@media (max-width: $screen-xs-max) {
-  .btn-block-xs {
-    width: 100%;
-  }
-
-  .no-gutter-xs {
-    margin-left: -($grid-gutter-width/2);
-    margin-right: -($grid-gutter-width/2);
-    > table.table tr {
-      td:first-child,
-      th:first-child {
-        padding-left: ($grid-gutter-width/2);
+    .user {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      position: absolute;
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        border: solid 3px white;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
       }
-      td:last-child,
-      th:last-child {
-        padding-right: ($grid-gutter-width/2);
-      }
+
+      &.user0 { left: 39px; top: 50px; }
+      &.user1 { left: 150px; top: 45px; }
+      &.user2 { left: 75px; top: 155px; }
+      &.user3 { right: 15px; top: 150px; }
     }
   }
-  .flash-messages {
-    padding: 0px;
-    .alert {
-      margin-bottom: 0px;
-      border-radius: 0px;
-    }
-  }
+
 }
 
-.form-actions {
-  border-top: solid 1px #efefef;
-  padding-top: 1em;
-}
+

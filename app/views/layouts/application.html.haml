@@ -27,7 +27,7 @@
 
   %body(class="#{controller_name}-#{action_name} #{content_for :body_class}")
     #layout_container
-      #header
+      -##header
         = render "layouts/navigation"
 
       #main{role: "main"}
@@ -35,7 +35,7 @@
 
         = content_for?(:content) ? content_for(:content) : yield
 
-      #footer
+      -##footer
         .container
           FOOTER
 

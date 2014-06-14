@@ -51,13 +51,4 @@ Transportation::Application.configure do
   config.analytics_enabled = false
 
   config.twilio_voice_application_sid = "AP8d91b86bc2c3e3a9e31f042249b3a147"
-
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.alert = true
-    Bullet.bullet_logger = true
-    Bullet.console = true
-    Bullet.rails_logger = true
-    Bullet.add_footer = true
-  end
 end

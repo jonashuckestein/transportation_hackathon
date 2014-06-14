@@ -1,13 +1,16 @@
+- add_body_class "groups"
 .container
-  .group
-    .description= @group.description
+  .row
+    - @groups.each do |group|
+      .col-sm-4
+        .group
+          .users
+            - group.users.each_with_index do |u, i|
+              .user{class: "user#{i}"}
+                .image
+                  = image_tag "profile/#{u.profile_image}"
+                .name= u.name
 
-    .details
-      Leaves at #{l @group.leave_at} from #{@group.leave_from}.
-
-    - @group.users.each do |u|
-      .user
-        .image
-          = image_tag "profile/#{u.profile_image}"
-        .name= u.name
+          .details
+            #{group.description} at #{group.leave_at.to_s(:time)}
 
