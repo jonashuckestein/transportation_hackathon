@@ -1,12 +1,8 @@
 Transportation::Application.routes.draw do
 
-  ### ADMIN ###
-
-  namespace :admin do
-    require "sidekiq/web"
-    require "sidetiq/web"
-    mount Sidekiq::Web => "/sidekiq"
-  end
+  get "/groups", to: "groups#index"
+  get "/request_ride(.:format)", to: "groups#request_ride"
+  get "/reset", to: "groups#reset"
 
   root to: "landing#default"
 end

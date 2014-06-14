@@ -1,0 +1,13 @@
+.container
+  .group
+    .description= @group.description
+
+    .details
+      Leaves at #{l @group.leave_at} from #{@group.leave_from}.
+
+    - @group.users.each do |u|
+      .user
+        .image
+          = image_tag "profile/#{u.profile_image}"
+        .name= u.name
+
