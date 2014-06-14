@@ -25,14 +25,6 @@ end
 
 gem "uglifier"
 
-group :jobs do
-  gem "redis"
-  gem "hiredis"
-  gem "sidekiq", ">= 3.0.0"
-  gem "sidetiq", github: "tobiassvn/sidetiq" # for 3.0.0 compatibility
-  gem "redis-rails"
-end
-
 group :development do
   gem "foreman"
   gem "binding_of_caller"

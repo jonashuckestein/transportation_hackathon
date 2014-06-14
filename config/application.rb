@@ -31,8 +31,6 @@ module Transportation
     #I18n.enforce_available_locales = true
     #I18n.fallbacks = [:en]
 
-    config.cache_store = :redis_store, ENV["REDIS_URL"]+"/transportation_cache"
-
     ### EMAILS VIA MANDRILL ###
     config.action_mailer.smtp_settings = {
       address: "smtp.mandrillapp.com",
