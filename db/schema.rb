@@ -11,19 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140614105212) do
+ActiveRecord::Schema.define(version: 20140615093956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "groups", force: true do |t|
     t.integer  "driver_id"
-    t.datetime "leave_at",    null: false
-    t.string   "leave_from",  null: false
-    t.string   "route",       null: false
+    t.datetime "leave_at",                               null: false
+    t.string   "leave_from",                             null: false
+    t.string   "route",                                  null: false
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "circle_center_long", default: 13.393171
+    t.float    "circle_center_lat",  default: 52.505891
+    t.float    "circle_radius",      default: 200.0
   end
 
   create_table "users", force: true do |t|

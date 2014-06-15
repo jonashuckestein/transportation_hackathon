@@ -1,5 +1,6 @@
-body {
-  padding-top: 30px;
+#map-canvas {
+  min-height: 800px;
+  height: 100%;
 }
 
 .frame {
@@ -48,8 +49,6 @@ body {
 
 }
 
-$white: #F3EDD6;
-$red: #DA6260;
 @-webkit-keyframes blink {
   0% { opacity: 1.0; }
   30% { opacity: 0.0; }
@@ -61,12 +60,17 @@ $red: #DA6260;
 }
 
 body.groups {
+  margin-top: 30px;
   padding-top: 50px;
   background: black;
   background: #0D3E58;
-  padding-bottom: 100px;
+  .container {
+    min-height: 1200px;
+  }
 
   .live {
+    z-index: 1000;
+    background: rgba(0,0,0,0.2);
     color: $red;
     font-weight: bold;
     padding: 15px 70px;
@@ -138,6 +142,7 @@ body.groups {
       &.user1 { left: 150px; top: 45px; }
       &.user2 { left: 75px; top: 155px; }
       &.user3 { right: 15px; top: 150px; }
+      &.user4 { right: -70px; top: 100px; }
     }
   }
 
