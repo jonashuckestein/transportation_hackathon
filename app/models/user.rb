@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   belongs_to :group
 
-  def improve_address
+  def improve_address # so google can find it
     if destination_address.present? &&
       !destination_address.include?("Berlin") &&
       !destination_address.include?("berlin")
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   end
 
   def determine_group
-    self.group = Group.first
+    self.group = Group.closest(destination_address)
     save!
   end
 end

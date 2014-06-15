@@ -2,7 +2,7 @@ Group.destroy_all
 User.destroy_all
 
 group = Group.create!(
-  description: "Neukölln Crew",
+  description: "Charlottenburg",
   route: "Bla",
   leave_from: "Le Labo",
   leave_at: Time.new(2014, 6, 15, 19, 00),

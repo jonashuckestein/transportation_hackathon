@@ -6,6 +6,10 @@ class Group < ActiveRecord::Base
 
   belongs_to :driver, class_name: "User"
 
+  def self.closest(destination_address)
+    first
+  end
+
   def has_car?
     driver_id.present?
   end

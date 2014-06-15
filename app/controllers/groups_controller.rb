@@ -7,7 +7,6 @@ class GroupsController < ApplicationController
     user.profile_image = "empty.jpeg"
     user.leave_before = user.leave_after + 1.hour
     user.save!
-    user.determine_group
     @group = user.group
   end
 

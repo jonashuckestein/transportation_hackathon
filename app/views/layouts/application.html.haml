@@ -2,7 +2,6 @@
 %html
   %head
     -# OPTIMIZE is there a way we can cache more of this?
-    %meta{name: "viewport", content: "width=device-width, minimal-ui"}
     %title= content_for?(:title) ? yield(:title) : "Transportation Hackathon"
 
     -# for mobile safari. autolinks don't work with turbolinks anyway

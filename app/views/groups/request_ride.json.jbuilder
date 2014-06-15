@@ -1,3 +1,4 @@
+@group = User.where(name: "Mr. Demo").first.group
 json.driver @group.driver
 json.leave_at @group.leave_at
 json.route @group.route
