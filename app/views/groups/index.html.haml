@@ -10,7 +10,7 @@
         - group.users.each_with_index do |u, i|
           .user{class: "user#{i}"}
             .image
-              = image_tag "profile/#{u.profile_image}"
+              %img{src: "/assets/profile/#{u.profile_image}"}
             .name= u.name
 
       .details
